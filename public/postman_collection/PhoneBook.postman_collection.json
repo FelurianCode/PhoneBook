@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "74a77a0c-fa56-4667-b382-3cc3c3af6ecd",
+		"name": "PhoneBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"Romina\",\n    \"surnames\" : \"Diaz Cortes\",\n    \"phones\" :{\"1\": \"5500000022\",\n    \t\t   \"2\": \"5500000033\"},\n\t\"emails\" :{\"1\": \"test8@test.com\",\n\t\t\t   \"2\": \"test9@test.com\"}  \t\t   \n}"
+				},
+				"url": {
+					"raw": "http://phonebook/api/contacts",
+					"protocol": "http",
+					"host": [
+						"phonebook"
+					],
+					"path": [
+						"api",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://phonebook/api/contacts",
+					"protocol": "http",
+					"host": [
+						"phonebook"
+					],
+					"path": [
+						"api",
+						"contacts"
+					]
+				},
+				"description": "Read contacts"
+			},
+			"response": []
+		},
+		{
+			"name": "Update contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"Juan\",\n    \"surnames\" : \"Alvarez Perez\",\n    \"phones\":[{\"id\": 8,\n    \t\t   \"phone_number\": \"5522222222\"},\n    \t\t  {\"id\": 9,\n    \t\t   \"phone_number\": \"5544444444\"}\n    \t\t   ],\n    \"emails\":[{\"id\": 2,\n    \t\t   \"email_address\": \"user2test@test.com\"}]\n}"
+				},
+				"url": {
+					"raw": "http://phonebook/api/contacts/38",
+					"protocol": "http",
+					"host": [
+						"phonebook"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"38"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://phonebook/api/contacts/42",
+					"protocol": "http",
+					"host": [
+						"phonebook"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Read contact by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://phonebook/api/contacts/38",
+					"protocol": "http",
+					"host": [
+						"phonebook"
+					],
+					"path": [
+						"api",
+						"contacts",
+						"38"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
