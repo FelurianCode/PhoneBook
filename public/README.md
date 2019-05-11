@@ -1,4 +1,4 @@
-# php-phone-book
+# php-phone-book (Basic REST API with CRUD operations)
 
 -In the config/connection.php file you can edit your local database configuration
 
